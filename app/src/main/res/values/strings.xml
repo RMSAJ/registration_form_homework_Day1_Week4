@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">registration form homework Day1 Week4</string>
+    <string name="full_name">pls type your full name</string>
+    <string name="please_type_your_email">Please type your email</string>
+    <string name="please_type_your_password">Please type your password</string>
+    <string name="please_re_type_your_password">Please re-type your password</string>
+    <string name="please_type_your_birthdate">Please type your BirthDate</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="register">Register</string>
+    <string name="thanks_for_the_input">Thanks for the Input</string>
+</resources>
