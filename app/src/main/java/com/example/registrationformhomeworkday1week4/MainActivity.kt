@@ -15,19 +15,26 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
     binding.registrationButtonId.setOnClickListener { showInfo() }
     }
-
+    val name = binding.Name.text
+    val email = binding.email.text
+    val pass1 = binding.password.text
+    val pass2 = binding.repassword.text
+    val genderF = binding.femaleBottun.isChecked
+    var result = binding.Result.text
+    val birthDate = binding.Birthdate.text
     fun showInfo(){
         // checking if any information is empty
-     val info =   if (binding.Name.text.toString().isEmpty() || binding.email.text.toString().isEmpty() ||
-            binding.password.text.toString().isEmpty() || binding.repassword.text.toString().isEmpty()) {
+     val info =   if (name.toString().isEmpty() || email.toString().isEmpty() ||
+            pass1.toString().isEmpty() || pass2.toString().isEmpty()) {
             "You left some blanks pls fill them"
-        } else if (binding.password.text.toString() != binding.repassword.text.toString()){
+        } else if (pass1.toString() != pass2.toString()){
             "please make sure you have putted the correct passwprd "}
+     else if(email.toString().contains('.') == false || email.toString().contains('@') == false ) "pleas enter valiable email"
      // printing the user input information
-     else "\n${binding.Name.text} \n${if (binding.femaleBottun.isChecked){"Female"}else "male" } \n${binding.Birthdate.text} \n${binding.email.text} \n${binding.password.text} \n${binding.repassword.text}"
+     else "\n${name} \n${if (genderF){"Female"}else "male" } \n${birthDate} \n${email} \n${pass1} \n${pass2}"
         // formatting the input into suitable format
         val formattedInfo = info.format()
-        binding.Result.text = formattedInfo
+        result = formattedInfo
     }
 
 }
