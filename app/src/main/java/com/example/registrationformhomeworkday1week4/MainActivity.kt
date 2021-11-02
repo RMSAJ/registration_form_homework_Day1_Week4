@@ -2,6 +2,7 @@ package com.example.registrationformhomeworkday1week4
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
 import com.example.registrationformhomeworkday1week4.databinding.ActivityMainBinding
 
 
@@ -12,29 +13,40 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-    binding.registrationButtonId.setOnClickListener { showInfo() }
+        binding.registrationButtonId.setOnClickListener { showInfo() }
     }
 
-    fun showInfo(){
-        val name = binding.Name.text
-        val email = binding.email.text
-        val pass1 = binding.password.text
-        val pass2 = binding.repassword.text
+    private fun showInfo() {
+
+//        Toast.makeText(MainActivity@ this, "in fun", Toast.LENGTH_SHORT).show()
         val genderF = binding.femaleBottun.isChecked
-        var result = binding.Result.text
-        val birthDate = binding.Birthdate.text
+        val name = binding.nameEditText.text.toString()
+        val email = binding.emaimEditText.text.toString()
+        val pass1 = binding.passwordEditText.text.toString()
+        val pass2 = binding.repasswordEditText.text.toString()
+        val birthDate = binding.BirthdateEditText.text.toString()
+
         // checking if any information is empty
-     val info =   if (name.toString().isEmpty() || email.toString().isEmpty() ||
-            pass1.toString().isEmpty() || pass2.toString().isEmpty()) {
+        var result = if (name.isEmpty() || email.isEmpty() ||
+            pass1.isEmpty() || pass2.isEmpty() || birthDate.isEmpty()) {
             "You left some blanks pls fill them"
-        } else if (pass1.toString() != pass2.toString()){
-            "please make sure you have putted the correct passwprd "}
-     else if(email.toString().contains('.') == false || email.toString().contains('@') == false ) "pleas enter valiable email"
-     // printing the user input information
-     else "\n${name} \n${if (genderF){"Female"}else "male" } \n${birthDate} \n${email} \n${pass1} \n${pass2}"
+        } else if (pass1 != pass2) {
+            "pls put the correct password "
+        } else if (!email.contains('.') || !email.contains('@')) "pleas enter valiable email"
+        // printing the user input information
+        else {
+            "\n ${name} \n ${
+                if (genderF) {
+                    "Female"
+                } else "male"
+            } \n${birthDate} \n${email} \n${pass1} \n${pass2}"
+        }
+        binding.Result.text = result
+
+        //
         // formatting the input into suitable format
-        val formattedInfo = info.format()
-        result = formattedInfo
+
+
     }
 
 }

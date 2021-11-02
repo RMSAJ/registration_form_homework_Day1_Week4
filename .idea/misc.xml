@@ -3,7 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/Mohd/AndroidStudioProjects/registrationformhomeworkDay1Week4/app/src/main/res/layout/activity_main.xml" value="0.4" />
+        <entry key="..\:/Users/Mohd/AndroidStudioProjects/registrationformhomeworkDay1Week4/app/src/main/res/drawable/ic_Female.xml" value="0.2546875" />
+        <entry key="..\:/Users/Mohd/AndroidStudioProjects/registrationformhomeworkDay1Week4/app/src/main/res/drawable/ic_email.xml" value="0.2546875" />
+        <entry key="..\:/Users/Mohd/AndroidStudioProjects/registrationformhomeworkDay1Week4/app/src/main/res/drawable/ic_female.xml" value="0.14635416666666667" />
+        <entry key="..\:/Users/Mohd/AndroidStudioProjects/registrationformhomeworkDay1Week4/app/src/main/res/drawable/ic_round_up.xml" value="0.2546875" />
+        <entry key="..\:/Users/Mohd/AndroidStudioProjects/registrationformhomeworkDay1Week4/app/src/main/res/layout/activity_main.xml" value="0.6" />
       </map>
     </option>
   </component>

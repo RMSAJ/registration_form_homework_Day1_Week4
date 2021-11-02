@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">registration form homework Day1 Week4</string>
+    <string name="full_name">الرجاء كتابة الاسم</string>
+    <string name="please_type_your_email">البريد الالكتروني</string>
+    <string name="please_type_your_password">تعبئة كلمة المرور</string>
+    <string name="please_re_type_your_password">اعادة تعبئة كلمة المرور</string>
+    <string name="please_type_your_birthdate">تاريخ الميلاد</string>
+    <string name="male">ذكر</string>
+    <string name="female">أنثى</string>
+    <string name="register">تسجيل</string>
+    <string name="thanks_for_the_input">شكراً لادخالك البيانات</string>
+    <string name="the_info">المعلومات</string>
+</resources>
